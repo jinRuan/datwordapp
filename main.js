@@ -6,14 +6,3 @@ function randBG(){
 	//document.body.style.background = bgcolor[i];
 }
 
-$( ".hidden" ).on( "taphold", function() {
-	$('.card').show();
-	$(".hidden").hide();
-	randBG();
-});
-
-$('.hidden').mousedown(function() {
-	$('.card').show();
-	$(".hidden").hide();
-	randBG();
-	});
