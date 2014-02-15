@@ -4,22 +4,27 @@ body {
 }
 
 #button {
-    font-size: 5em;
+    font-size: 3em;
 top: 50%;
    color: white;
+padding-top: 5%;
+    padding-bottom: 5%;
 
 }
 
-#title {
+ #title {
     text-align: center;
     color:white;
-    font-size:7em;
-    
+    font-size: 700%;
+    padding-top: 0px;
+     padding-bottom: none;
+
+
 }
 
 #buttonDiv {
     width:55%;
-    height:10%;
+    max-height: 10%;
     background-color: #95a5a6;
     align-content:center;
     text-align: center;
@@ -32,3 +37,11 @@ top: 50%;
 a {
     text-decoration: none;
 }
+
+#description {
+    font-size:200%;
+    text-align: center;
+    margin-top:-7%;
+    color:white;
+}
+
