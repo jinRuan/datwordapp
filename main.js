@@ -6,6 +6,7 @@ function randBG(){
 	var i = Math.floor( Math.random() * 8);
 
 	return bgcolor[i];
+<<<<<<< HEAD
 }
 
 function changeBG(e){
@@ -15,4 +16,11 @@ function changeBG(e){
 
 function randWord(){
 	1
+=======
+}
+
+function changeBG(e){
+	$(e).css('background', randBG());
+
+>>>>>>> 156025da2f42af35ef81ac3f78bef6263420b995
 }
