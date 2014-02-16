@@ -1,8 +1,8 @@
 body, html, #main{
-  height: 100%;
-  padding:0;
-  margin:0;
-  overflow: hidden;
+	height: 100%;
+	padding:0;
+	margin:0;
+	overflow: hidden;
 }
 #end{
 	text-align: center;
@@ -31,7 +31,7 @@ body, html, #main{
 	background: #3498db;
 
 
-	display: block;
+	display: none;
 }
 #card{
 	text-align: center;
@@ -49,11 +49,11 @@ body, html, #main{
 
 }
 
-#button{
+#buttons{
 	margin-top: .5em;
 }
 #check{
-margin-right: 2%;
+	margin-right: 2%;
 }
 #xmark{
 	margin-left: 2%;
@@ -65,8 +65,14 @@ margin-right: 2%;
 	font-size: 3rem;
 }
 
+#nextEnd{
+	display: none; 
+	margin-top: 20px;
+	font-weight: 400;
+	font-size: 3rem;
+}
 #hourglass{
-		text-align: center;
+	text-align: center;
 	height: 100%;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 800;

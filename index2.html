@@ -13,6 +13,7 @@
 
  <link rel="stylesheet" type="text/css" href="normalize.css" />  
  <link rel="stylesheet" type="text/css" href="style.css" />
+ <link rel="stylesheet" type="text/css" href="index.css">
 
 
  <link href='http://fonts.googleapis.com/css?family=Raleway:400,700,800' rel='stylesheet' type='text/css'>
@@ -27,7 +28,17 @@ unselectable='on'
 onselectstart='return false;'
 onmousedown='return false;'>
 
+
 <div id="main">
+    <div class="slide">
+        <p id="title">What's that Word</p>
+        <p id="description">Can you guess correctly before time runs out?</p>
+
+        <div id="buttonDiv">
+            <p id="button">Start</p>
+        </div>
+    </div>
+
     <div id="hidden">Tap to reveal
     </div>
     <div id="card" class="clickable">
@@ -62,7 +73,7 @@ onmousedown='return false;'>
                 <div class="bottom bond triangle"></div>
             </div>
         </div>
-        <div id="button">
+        <div id="buttons">
             <img id="check"src="checkmark.png" width="80px">
             <img id='xmark' src="xmark.png" width="80px">
         </div>
@@ -71,9 +82,15 @@ onmousedown='return false;'>
 </div>
 <div id="end">
     Loser!
+    <div id="nextEnd" >Tap to restart</div>
 </div>
 
 <script>
+$('.slide').on('click', function(){
+    $('.slide').css('display', 'none');
+    $('#hidden').css('display', 'block');
+
+})
 
 $("#hidden").on("click", function() {
     var x = randTime();
@@ -134,6 +151,15 @@ $('.clickable').on('click', function(){
     },3000);
 })
 
+$('#end').on('click', function(){
+    $('#main').css("display", "block");
+    $('.slide').css('display', 'block');
+    $('#hidden').css("display", "none");
+    $('#card').css("display","none");
+    $('#hourglass').css("display","none");
+    $('#end').css('display', 'none');
+
+})
 </script>
 </body>
 
