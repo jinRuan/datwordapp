@@ -52,15 +52,17 @@
         </div>
     </div>
 
-    <script>
+     <script>
     $("#hidden").on("click", function() {
         $('#hidden').css("display", "none");
         $('#card').css("display","block");
+        changeBG('#card');
 
         setTimeout(function(){
             $('#card').css("display", "none");
             $('#hourglass').css("display","block");
 
+            changeBG('#hourglass');
         },3000);
     })
     </script>
