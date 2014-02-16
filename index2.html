@@ -21,6 +21,7 @@
     <div id="hidden">Click to reveal
         </div>
     <div id="card">card
+        <div id="next" >Tap for next word</div>
         </div>
     <div id="hourglass">
         <div id="glass-container">
@@ -50,6 +51,9 @@
                 <div class="bottom bond triangle"></div>
             </div>
         </div>
+        <div id="success">
+        <img id="check"src="checkmark.png" width="80px">
+        </div>
     </div>
 
 
@@ -66,6 +70,13 @@
 
             changeBG('#hourglass');
         },3000);
+    })
+
+    $('#success').on("click", function(){
+        $('#hourglass').css('display', 'none');
+        $('#card').css('display', 'block');
+        $('#next').css('display', 'block');
+
     })
     </script>
 </body>

@@ -14,7 +14,8 @@ body, html {
 
 	height: 100%;
 
-	display: block;}
+	display: block;
+}
 #card{
 	text-align: center;
 	height: 100%;
@@ -29,6 +30,17 @@ body, html {
 	height: 100%;
 	display: none;
 
+}
+
+#success{
+	padding-top: 1em;
+}
+
+#next{
+	display: none; 
+	margin-top: 20px;
+	font-weight: 400;
+	font-size: 3rem;
 }
 
 #hourglass{
