@@ -91,7 +91,7 @@ onmousedown='return false;'>
     </audio>
 
     <script>
-
+    var isClickable = true;
     // function stopAudio(){
 
 
@@ -109,9 +109,10 @@ onmousedown='return false;'>
         $('.slide').css('display', 'none');
         $('#hidden').css('display', 'block');
 
-    })
+    });
 
     $("#hidden").on("click", function() {
+        clickable = false;
         var x = randTime();
         setTimeout(function(){
             $('#main').css('display','none');
@@ -134,15 +135,16 @@ onmousedown='return false;'>
 
 
         setTimeout(function(){
-            $('#card').removeClass('clickable', 4000);
+
             $('#card').css("display", "none");
 
             $('#hourglass').css("display","block");
             changeBG('#hourglass');
+
         },3000);
-    })
+    });
     $('#xmark').on('click', function(){
-    //    stopAudio();
+        clickable = false;
         $('#hourglass').css('display', 'none');
         $('#card').css('display', 'block');
         changeBG('#card');
@@ -155,31 +157,35 @@ onmousedown='return false;'>
 
             changeBG('#hourglass');
         },3000);
-    })
+    });
+
     $('#check').on("click", function(){
     //    stopAudio();
-        $('#hourglass').css('display', 'none');
-        $('#card').css('display', 'block');
-        $('#next').css('display', 'block');        
-
-    })
+    clickable = true;
+    $('#hourglass').css('display', 'none');
+    $('#card').css('display', 'block');
+    $('#next').css('display', 'block');        
+});
 
     $('.clickable').on('click', function(){
+        if(clickable === true){
+            clickable = false;
 
-        $('#next').css('display', 'none');
-        changeBG('#card');
-        $('#clear').empty();
-        $( "#clear" ).append( randWord() );
+            $('#next').css('display', 'none');
+            changeBG('#card');
+            $('#clear').empty();
+            $( "#clear" ).append( randWord() );
 
-        setTimeout(function(){
-            $('#card').css("display", "none");
-            $('#hourglass').css("display","block");
-
-            changeBG('#hourglass');
-        },3000);
-    })
+            setTimeout(function(){
+                $('#card').css("display", "none");
+                $('#hourglass').css("display","block");
+                clickable = true;
+                changeBG('#hourglass');
+            },3000);
+        }});
 
     $('#end').on('click', function(){
+        clickable = true;
         $('#main').css("display", "block");
         $('.slide').css('display', 'block');
         $('#hidden').css("display", "none");
