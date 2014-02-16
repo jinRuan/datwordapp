@@ -2,7 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="format-detection" content="telephone=no" />
     <title></title>
     <meta name="description" content="">
  <!--    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,16 +89,18 @@ onmousedown='return false;'>
 
 </div>
 
-<audio id="audio1">
+<!-- <audio id="audio1">
     <source src="47434^BUZZER.mp3" type="audio/mp3">
 
 </audio>
 <audio id="audio">
     <source src="mix_3m27s (audio-joiner.com).mp3" type="audio/mp3">
-</audio>
+</audio> -->
 
     <script>
     var isClickable = true;
+    var media = new Media('47434^BUZZER.mp3');
+    var media2 = new Media("mix_3m27s (audio-joiner.com).mp3");
     // function stopAudio(){
 
 
@@ -122,15 +125,17 @@ onmousedown='return false;'>
         var x = randTime();
         setTimeout(function(){
             $('#main').css('display','none');
-            annoy.pause();
-            loser.play();
+        //    annoy.pause();
+        media.stop();
+            media2.play();
             annoy.currentTime = 0;
             $('#end').css('display', 'block');
             $('#nextEnd').css('display', 'block');
         },x);
 
         var annoy = document.getElementById("audio");
-        var final =    annoy.play();
+        //var final =    annoy.play();
+        media.play();
         var loser = document.getElementById("audio1");
 
 
