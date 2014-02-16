@@ -19,3 +19,8 @@ function randWord(){
 	var i = Math.floor(Math.random() * 54);
 	return words[i];
 }
+
+function randTime(){
+	var i = Math.floor(Math.random()* 91);
+	return i + 30;
+}

@@ -1,6 +1,24 @@
-body, html{
+body, html, #main{
   height: 100%;
+  padding:0;
+  margin:0;
+  overflow: hidden;
 }
+#end{
+	text-align: center;
+	height: 100%;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 800;
+	color:white;
+	padding-top: 25%;
+	font-size: 5em;
+
+	background: #e74c3c;
+
+
+	display: none;
+}
+
 #hidden{
 	text-align: center;
 	height: 100%;
@@ -12,7 +30,6 @@ body, html{
 
 	background: #3498db;
 
-	height: 100%;
 
 	display: block;
 }
@@ -27,7 +44,7 @@ body, html{
 
 	background: #3498db;
 
-	height: 100%;
+
 	display: none;
 
 }
