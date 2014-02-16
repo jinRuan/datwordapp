@@ -71,7 +71,7 @@ onmousedown='return false;'>
             <div id="bond">
                 <div class="top bond triangle"></div>
                 <div class="bottom bond triangle"></div>
-            </div>
+            </div> 
         </div>
         <div id="buttons">
             <img id="check"src="checkmark.png" width="80px">
@@ -94,11 +94,12 @@ $('.slide').on('click', function(){
 
 $("#hidden").on("click", function() {
     var x = randTime();
-    setTimeout(function(){
-        $('#main').css('display','none');
-        $('#end').css('display', 'block');
-    },x);
+ //   setTimeout(function(){
+  //      $('#main').css('display','none');
+  //      $('#end').css('display', 'block');
+   // },x);
 
+    $('#clear').empty();
     $( "#clear" ).append( randWord());
     $('#hidden').css("display", "none");
     $('#card').css("display","block");
@@ -123,13 +124,14 @@ $('#xmark').on('click', function(){
     setTimeout(function(){
         $('#card').css("display", "none");
         $('#hourglass').css("display","block");
-
+            $('body').css('zoom', '125%');
 
         changeBG('#hourglass');
     },3000);
 })
 $('#check').on("click", function(){
     $('#hourglass').css('display', 'none');
+        $('body').css('zoom', '50%');
     $('#card').css('display', 'block');
     $('#next').css('display', 'block');        
 
@@ -145,7 +147,7 @@ $('.clickable').on('click', function(){
     setTimeout(function(){
         $('#card').css("display", "none");
         $('#hourglass').css("display","block");
-
+        $('body').css('zoom', '200%');
 
         changeBG('#hourglass');
     },3000);
