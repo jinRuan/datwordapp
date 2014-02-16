@@ -32,10 +32,15 @@ body, html {
 
 }
 
-#success{
-	padding-top: 1em;
+#button{
+	margin-top: .5em;
 }
-
+#check{
+margin-right: 2%;
+}
+#xmark{
+	margin-left: 2%;
+}
 #next{
 	display: none; 
 	margin-top: 20px;
@@ -59,18 +64,7 @@ body, html {
 
 /*hourglass*/
 
-@-webkit-keyframes flow {	text-align: center;
-	height: 100%;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 800;
-	color:white;
-	padding-top: 25%;
-	font-size: 10vw;
-
-	background: #3498db;
-
-	height: 100%;
-	display: none;
+@-webkit-keyframes flow {
 	0% {
 		-webkit-transform: scale(1);
 		transform: scale(1);

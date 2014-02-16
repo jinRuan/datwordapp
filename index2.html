@@ -61,7 +61,7 @@ onmousedown='return false;'>
     </div>
     <div id="button">
         <img id="check"src="checkmark.png" width="80px">
-        <img id='ex' src="xmark.png" width="80px">
+        <img id='xmark' src="xmark.png" width="80px">
     </div>
 </div>
 
@@ -86,13 +86,28 @@ $("#hidden").on("click", function() {
         changeBG('#hourglass');
     },3000);
 })
+$('#xmark').on('click', function(){
+    $('#hourglass').css('display', 'none');
+    $('#card').css('display', 'block');
+    changeBG('#card');
+        $('#clear').empty();
+    $( "#clear" ).append( randWord() );
 
+    setTimeout(function(){
+        $('#card').css("display", "none");
+        $('#hourglass').css("display","block");
+
+
+        changeBG('#hourglass');
+    },3000);
+})
 $('#check').on("click", function(){
     $('#hourglass').css('display', 'none');
     $('#card').css('display', 'block');
     $('#next').css('display', 'block');        
 
 })
+
 $('.clickable').on('click', function(){
 
     $('#next').css('display', 'none');
