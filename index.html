@@ -33,7 +33,7 @@ onmousedown='return false;'>
 <div id="main">
     <div class="slide">
         <p id="title">What's that Word</p>
-        <p id="description">Can you guess correctly before time runs out?</p>
+        <p id="description">Can you handle the uncertainty?</p>
 
         <div id="buttonDiv">
             <p id="button">Start</p>
@@ -84,8 +84,14 @@ onmousedown='return false;'>
 <div id="end">
     Loser!
     <div id="nextEnd" >Tap to restart</div>
+    <!--<BGSOUND SRC="47434^BUZZER.mp3" LOOP=3></BGSOUND>-->
+
 </div>
 
+<audio id="audio1">
+    <source src="47434^BUZZER.mp3" type="audio/mp3">
+
+</audio>
 <audio id="audio">
     <source src="mix_3m27s (audio-joiner.com).mp3" type="audio/mp3">
 </audio>
@@ -117,14 +123,17 @@ onmousedown='return false;'>
         setTimeout(function(){
             $('#main').css('display','none');
             annoy.pause();
+            loser.play();
             annoy.currentTime = 0;
             $('#end').css('display', 'block');
             $('#nextEnd').css('display', 'block');
         },x);
 
         var annoy = document.getElementById("audio");
-
         var final =    annoy.play();
+        var loser = document.getElementById("audio1");
+
+
 
 
         $('#clear').empty();
@@ -194,6 +203,8 @@ onmousedown='return false;'>
         $('#end').css('display', 'none');
         $('#nextEnd').css('display', 'none');
     })
+
+      $().css
     </script>
 </body>
 
