@@ -86,85 +86,109 @@ onmousedown='return false;'>
     <div id="nextEnd" >Tap to restart</div>
 </div>
 
-<script>
+<audio id="audio">
+    <source src="mix_3m27s (audio-joiner.com).mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+
+    // function stopAudio(){
+
+
+    //     annoy.pause();
+    //     var newSongEl = document.getElementById("audio");
+    //     newSongEl.currentTime = 0;
+    //     newSongEl.play();
+
+
+    // }
 
     $('body').css('zoom', '145%');
 
-$('.slide').on('click', function(){
-    $('.slide').css('display', 'none');
-    $('#hidden').css('display', 'block');
+    $('.slide').on('click', function(){
+        $('.slide').css('display', 'none');
+        $('#hidden').css('display', 'block');
 
-})
+    })
 
-$("#hidden").on("click", function() {
-    var x = randTime();
-    setTimeout(function(){
-        $('#main').css('display','none');
-        $('#end').css('display', 'block');
-        $('#nextEnd').css('display', 'block');
-    },10000);
+    $("#hidden").on("click", function() {
+        var x = randTime();
+        setTimeout(function(){
+            $('#main').css('display','none');
+            annoy.pause();
+            annoy.currentTime = 0;
+            $('#end').css('display', 'block');
+            $('#nextEnd').css('display', 'block');
+        },x);
 
-    $('#clear').empty();
-    $( "#clear" ).append( randWord());
-    $('#hidden').css("display", "none");
-    $('#card').css("display","block");
-    changeBG('#card');
+        var annoy = document.getElementById("audio");
+
+        var final =    annoy.play();
 
 
-    setTimeout(function(){
-        $('#card').removeClass('clickable', 4000);
-        $('#card').css("display", "none");
+        $('#clear').empty();
+        $( "#clear" ).append( randWord());
+        $('#hidden').css("display", "none");
+        $('#card').css("display","block");
+        changeBG('#card');
 
-        $('#hourglass').css("display","block");
-        changeBG('#hourglass');
-    },3000);
-})
-$('#xmark').on('click', function(){
-    $('#hourglass').css('display', 'none');
-    $('#card').css('display', 'block');
-    changeBG('#card');
-    $('#clear').empty();
-    $( "#clear" ).append( randWord() );
 
-    setTimeout(function(){
-        $('#card').css("display", "none");
-        $('#hourglass').css("display","block");
+        setTimeout(function(){
+            $('#card').removeClass('clickable', 4000);
+            $('#card').css("display", "none");
 
-        changeBG('#hourglass');
-    },3000);
-})
-$('#check').on("click", function(){
-    $('#hourglass').css('display', 'none');
-    $('#card').css('display', 'block');
-    $('#next').css('display', 'block');        
+            $('#hourglass').css("display","block");
+            changeBG('#hourglass');
+        },3000);
+    })
+    $('#xmark').on('click', function(){
+    //    stopAudio();
+        $('#hourglass').css('display', 'none');
+        $('#card').css('display', 'block');
+        changeBG('#card');
+        $('#clear').empty();
+        $( "#clear" ).append( randWord() );
 
-})
+        setTimeout(function(){
+            $('#card').css("display", "none");
+            $('#hourglass').css("display","block");
 
-$('.clickable').on('click', function(){
+            changeBG('#hourglass');
+        },3000);
+    })
+    $('#check').on("click", function(){
+    //    stopAudio();
+        $('#hourglass').css('display', 'none');
+        $('#card').css('display', 'block');
+        $('#next').css('display', 'block');        
 
-    $('#next').css('display', 'none');
-    changeBG('#card');
-    $('#clear').empty();
-    $( "#clear" ).append( randWord() );
+    })
 
-    setTimeout(function(){
-        $('#card').css("display", "none");
-        $('#hourglass').css("display","block");
+    $('.clickable').on('click', function(){
 
-        changeBG('#hourglass');
-    },3000);
-})
+        $('#next').css('display', 'none');
+        changeBG('#card');
+        $('#clear').empty();
+        $( "#clear" ).append( randWord() );
 
-$('#end').on('click', function(){
-    $('#main').css("display", "block");
-    $('.slide').css('display', 'block');
-    $('#hidden').css("display", "none");
-    $('#card').css("display","none");
-    $('#hourglass').css("display","none");
-    $('#end').css('display', 'none');
-    $('#nextEnd').css('display', 'none');
-})
-</script>
+        setTimeout(function(){
+            $('#card').css("display", "none");
+            $('#hourglass').css("display","block");
+
+            changeBG('#hourglass');
+        },3000);
+    })
+
+    $('#end').on('click', function(){
+        $('#main').css("display", "block");
+        $('.slide').css('display', 'block');
+        $('#hidden').css("display", "none");
+        $('#card').css("display","none");
+        $('#hourglass').css("display","none");
+        $('#end').css('display', 'none');
+        $('#nextEnd').css('display', 'none');
+    })
+    </script>
 </body>
 
 </html>

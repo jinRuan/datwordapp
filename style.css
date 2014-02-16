@@ -4,6 +4,9 @@ body, html, #main{
 	margin:0;
 	overflow: hidden;
 }
+#audio{
+	display: none;
+}
 #end{
 	text-align: center;
 	height: 100%;
