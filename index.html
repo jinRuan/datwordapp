@@ -21,6 +21,7 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
  <script src="main.js"></script>
 
+
 </head>
 <body
 style='-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;'
@@ -86,6 +87,9 @@ onmousedown='return false;'>
 </div>
 
 <script>
+
+    $('body').css('zoom', '145%');
+
 $('.slide').on('click', function(){
     $('.slide').css('display', 'none');
     $('#hidden').css('display', 'block');
@@ -95,13 +99,9 @@ $('.slide').on('click', function(){
 $("#hidden").on("click", function() {
     var x = randTime();
     setTimeout(function(){
-        var s = $('#hourglass').css('display');
-        console.log(s);
-        if(s== 'block'){
-             $('body').css('zoom', '100%');
-        }
         $('#main').css('display','none');
         $('#end').css('display', 'block');
+        $('#nextEnd').css('display', 'block');
     },10000);
 
     $('#clear').empty();
@@ -116,13 +116,11 @@ $("#hidden").on("click", function() {
         $('#card').css("display", "none");
 
         $('#hourglass').css("display","block");
-            $('body').css('zoom', '150%');
         changeBG('#hourglass');
     },3000);
 })
 $('#xmark').on('click', function(){
     $('#hourglass').css('display', 'none');
-        $('body').css('zoom', '100%');
     $('#card').css('display', 'block');
     changeBG('#card');
     $('#clear').empty();
@@ -131,14 +129,12 @@ $('#xmark').on('click', function(){
     setTimeout(function(){
         $('#card').css("display", "none");
         $('#hourglass').css("display","block");
-            $('body').css('zoom', '150%');
 
         changeBG('#hourglass');
     },3000);
 })
 $('#check').on("click", function(){
     $('#hourglass').css('display', 'none');
-        $('body').css('zoom', '100%');
     $('#card').css('display', 'block');
     $('#next').css('display', 'block');        
 
@@ -154,7 +150,6 @@ $('.clickable').on('click', function(){
     setTimeout(function(){
         $('#card').css("display", "none");
         $('#hourglass').css("display","block");
-            $('body').css('zoom', '150%');
 
         changeBG('#hourglass');
     },3000);
@@ -167,7 +162,7 @@ $('#end').on('click', function(){
     $('#card').css("display","none");
     $('#hourglass').css("display","none");
     $('#end').css('display', 'none');
-
+    $('#nextEnd').css('display', 'none');
 })
 </script>
 </body>
