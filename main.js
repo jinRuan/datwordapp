@@ -36,6 +36,6 @@ function randWord(){
 }
 
 function randTime(){
-	var i = Math.floor(Math.random()* 90001);
-	return i + 30000;
+	var i = Math.floor(Math.random()* 1200001);
+	return i + 60000;
 }
