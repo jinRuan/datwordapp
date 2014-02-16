@@ -9,6 +9,7 @@ top: 50%;
    color: white;
 padding-top: 5%;
     padding-bottom: 5%;
+    font-family: 'Raleway', sans-serif;
 
 }
 
@@ -18,6 +19,8 @@ padding-top: 5%;
     font-size: 700%;
     padding-top: 0px;
      padding-bottom: none;
+     font-family: 'Raleway', sans-serif;
+     /*font-weight: 800;*/
 
 
 }
@@ -25,12 +28,12 @@ padding-top: 5%;
 #buttonDiv {
     width:55%;
     max-height: 10%;
-    background-color: #95a5a6;
+    background-color: #f1c40f;
     align-content:center;
     text-align: center;
     margin-left: 23%;
     margin-top:5%;
-
+    min-width: 40%;
 
 }
 
@@ -43,5 +46,7 @@ a {
     text-align: center;
     margin-top:-7%;
     color:white;
+    font-family: 'Raleway', sans-serif;
+
 }
 
