@@ -124,11 +124,10 @@ onmousedown='return false;'>
             $('#main').css('display','none');
             annoy.pause();
             loser.play();
-            navigator.vibrate(1000);
             annoy.currentTime = 0;
             $('#end').css('display', 'block');
             $('#nextEnd').css('display', 'block');
-        },x);
+        },10000);
 
         var annoy = document.getElementById("audio");
         annoy.play();
